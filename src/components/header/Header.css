@@ -1,9 +1,38 @@
 header {
-  height: 15vh;
+  height: 20vh;
+  width: 100%;
+  padding: 10px;
   display: flex;
+  justify-content: space-evenly;
   align-items: center;
+}
+h1 {
+  width: 30%;
+  text-wrap: nowrap;
+}
+.dateContainer {
+  display: flex;
+  width: 68%;
+  justify-content: center;
+  align-items: center;
+  gap: 15px;
+}
+p {
+  text-wrap: nowrap;
 }
 
 header h1 {
   color: rgb(38, 38, 192);
+}
+
+@media (max-width: 1200px) {
+  header {
+    flex-direction: column;
+  }
+}
+
+@media (max-width: 700px) {
+  p {
+    text-wrap: wrap;
+  }
 }

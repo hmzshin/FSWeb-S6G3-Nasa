@@ -3,18 +3,11 @@ import "./Content.css";
 
 function Content(props) {
   const { apodData } = props;
+  const [isShown, setIsShown] = useState(true);
 
   return (
-    <div className="bodyContainer">
-      <button type="">geri git</button>
-      <div className="content">
-        <h1>{apodData.title}</h1>
-        <input id="input" type="date"></input>
-        <div className="imageContainer">
-          <img src={apodData.url}></img>
-        </div>
-      </div>
-      <button>ileri git</button>
+    <div className="contentContainer">
+      <img title={apodData.title} src={apodData.url} />
     </div>
   );
 }
