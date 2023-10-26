@@ -6,8 +6,21 @@ function Content(props) {
   const [isShown, setIsShown] = useState(true);
 
   return (
-    <div className="contentContainer">
-      <img title={apodData.title} src={apodData.url} />
+    <div
+      className="contentContainer"
+      onMouseEnter={() => setIsShown(false)}
+      onMouseLeave={() => setIsShown(true)}
+    >
+      {isShown && <img title={apodData.title} src={apodData.url} />}
+
+      {!isShown && (
+        <div className="imgInfo">
+          <h4>{apodData.title}</h4>
+          <p>{apodData.date}</p>
+          <p>{apodData.explanation}</p>
+          <p>Copyright: {apodData.copyright}</p>
+        </div>
+      )}
     </div>
   );
 }
