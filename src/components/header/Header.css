@@ -1,0 +1,15 @@
+* {
+  margin: 0px;
+  padding: 0px;
+  box-sizing: border-box;
+}
+
+header {
+  height: 15vh;
+  display: flex;
+  align-items: center;
+}
+
+header h1 {
+  color: rgb(38, 38, 192);
+}
